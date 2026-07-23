@@ -3,7 +3,9 @@ html<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katarzyna Brochocka | Composer & Pianist</title>
+<title>Katarzyna Brochocka | kompozytorka, pianistka</title>
+font-family: 'Georgia', serif; strong;
+
 <style>
 /* Styl surowego, prestiżowego archiwum */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,9 +16,102 @@ color: #1a1a1a;
 line-height: 1.6;
 padding: 40px 20px;
 }
+
+/* --- MECHANIZM ZMIANY JĘZYKA --- */
+        body[data-lang="pl"] .lang-en { display: none !important; }
+        body[data-lang="en"] .lang-pl { display: none !important; }
+
+        /* --- SEKCJA STARTOWA (HERO) --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .language-switcher span {
+            cursor: pointer;
+            color: #888;
+            transition: color 0.3s ease;
+        }
+
+        .language-switcher span:hover {
+            color: var(--text-color);
+        }
+
+        .language-switcher span.active {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        h1 {
+            font-family: var(--font-headings);
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+  /* --- SEKCJE Z TREŚCIĄ --- */
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-family: var(--font-headings);
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+
 .container {
-max-width: 1000px;
+max-width: 800px;
 margin: 0 auto;
+padding: 20ox 20px;
+border-bottom: 1px solid #333;
 }
 header {
 border-bottom: 1px solid #1a1a1a;
